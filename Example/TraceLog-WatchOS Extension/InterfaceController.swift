@@ -14,19 +14,6 @@ class InterfaceController: WKInterfaceController {
 
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
-        // Logging a Trace level 1 event with a closure
-        logTrace() {
-            
-            //
-            // This closure will only be executed
-            // if logging in enabled.
-            //
-            if let unwrappedContext = context {
-                return "Application awoke with context: " + unwrappedContext.stringValue
-            } else {
-                return "Application awoke with no context."
-            }
-        }
     }
 
     override func willActivate() {
