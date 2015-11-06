@@ -166,9 +166,9 @@ public func logInfo(@autoclosure message: () -> String, tag: StaticString? = nil
 
     Examples:
     ```
-        logTrace(1"Trace message")
+        logTrace(1, "Trace message")
 
-        logTrace(1"Trace message", tag: "MyAppName")
+        logTrace(1, "Trace message", tag: "MyAppName")
     ```
 */
 public func logTrace(@autoclosure message: () -> String, level: Int = LogLevel.rawTraceLevels.start, tag: StaticString? = nil, _ file: StaticString = __FILE__, _ function: StaticString = __FUNCTION__, _ line: UInt = __LINE__) {
@@ -180,7 +180,6 @@ public func logTrace(@autoclosure message: () -> String, level: Int = LogLevel.r
         TLogger.log(LogLevel(rawValue: LogLevel.Trace1.rawValue + level - 1)!, tag: derivedTag, message: message(), file: file.stringValue, function: function.stringValue, lineNumber: UInt32(line));
     #endif
 }
-
 
 // MARK: Internal Private functions & Extensions.
 

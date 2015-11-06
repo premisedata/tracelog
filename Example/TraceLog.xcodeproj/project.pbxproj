@@ -16,6 +16,7 @@
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		63AA6FB8C7ACADA59F9CCC6E /* Pods_TraceLog_iOS_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3C5E238925FD0A96DEBC468 /* Pods_TraceLog_iOS_Tests.framework */; };
 		8368AE861C266711620EC1E2 /* Pods_TraceLog_OSX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B950EB5AC2B92A17B77AD32A /* Pods_TraceLog_OSX.framework */; };
+		8512CFE0FBF935DB4402C3BE /* Pods_TraceLog_WatchOS_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0ACB6A00AA4B935F0FF9E7A /* Pods_TraceLog_WatchOS_Extension.framework */; };
 		D5E87FFB2B9A7244F7989D9D /* Pods_TraceLog_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B40B4E42A7302FDFF100727B /* Pods_TraceLog_iOS.framework */; };
 		EA3037FA1BEA880300DC4084 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EA3037F71BEA880300DC4084 /* main.m */; };
 		EA3038001BEA882E00DC4084 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA3037FB1BEA882E00DC4084 /* Images.xcassets */; };
@@ -33,6 +34,13 @@
 		EA5C7FB91BEBAA7000B3951D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA5C7FB81BEBAA7000B3951D /* Assets.xcassets */; };
 		EA5C7FBC1BEBAA7000B3951D /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA5C7FBA1BEBAA7000B3951D /* MainMenu.xib */; };
 		EA5C7FD21BEBAB6D00B3951D /* TraceLogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA30384F1BEA94DC00DC4084 /* TraceLogTests.swift */; };
+		EAAD99FA1BECFD9600570AA8 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAAD99F81BECFD9600570AA8 /* Interface.storyboard */; };
+		EAAD99FC1BECFD9600570AA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAAD99FB1BECFD9600570AA8 /* Assets.xcassets */; };
+		EAAD9A031BECFD9600570AA8 /* TraceLog-WatchOS Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = EAAD9A021BECFD9600570AA8 /* TraceLog-WatchOS Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		EAAD9A081BECFD9600570AA8 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAD9A071BECFD9600570AA8 /* InterfaceController.swift */; };
+		EAAD9A0A1BECFD9600570AA8 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAD9A091BECFD9600570AA8 /* ExtensionDelegate.swift */; };
+		EAAD9A0C1BECFD9600570AA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAAD9A0B1BECFD9600570AA8 /* Assets.xcassets */; };
+		EAAD9A101BECFD9600570AA8 /* TraceLog-WatchOS.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = EAAD99F61BECFD9600570AA8 /* TraceLog-WatchOS.app */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +58,46 @@
 			remoteGlobalIDString = EA5C7FB31BEBAA7000B3951D;
 			remoteInfo = "TraceLog-OSX";
 		};
+		EAAD9A041BECFD9600570AA8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6003F582195388D10070C39A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EAAD9A011BECFD9600570AA8;
+			remoteInfo = "TraceLog-WatchOS Extension";
+		};
+		EAAD9A0E1BECFD9600570AA8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6003F582195388D10070C39A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EAAD99F51BECFD9600570AA8;
+			remoteInfo = "TraceLog-WatchOS";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EAAD9A161BECFD9600570AA8 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				EAAD9A031BECFD9600570AA8 /* TraceLog-WatchOS Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EAAD9A181BECFD9600570AA8 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				EAAD9A101BECFD9600570AA8 /* TraceLog-WatchOS.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1114AFE75770FDCCAADD266F /* TraceLog.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = TraceLog.podspec; path = ../TraceLog.podspec; sourceTree = "<group>"; };
@@ -106,6 +153,15 @@
 		EA5C7FC21BEBAA7000B3951D /* TraceLog-OSX-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TraceLog-OSX-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA5C7FD01BEBAB3E00B3951D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = "TraceLog-OSX-Tests/Info.plist"; sourceTree = SOURCE_ROOT; };
 		EA5C7FD31BEBCD8E00B3951D /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text; name = .travis.yml; path = ../.travis.yml; sourceTree = "<group>"; };
+		EAAD99F61BECFD9600570AA8 /* TraceLog-WatchOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TraceLog-WatchOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EAAD99F91BECFD9600570AA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		EAAD99FB1BECFD9600570AA8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EAAD99FD1BECFD9600570AA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EAAD9A021BECFD9600570AA8 /* TraceLog-WatchOS Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "TraceLog-WatchOS Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EAAD9A071BECFD9600570AA8 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		EAAD9A091BECFD9600570AA8 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		EAAD9A0B1BECFD9600570AA8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EAAD9A0D1BECFD9600570AA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F87B3B34F4B8B59C25C88136 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		F90913011AB2E61DA7E88799 /* Pods_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -149,6 +205,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EAAD99FF1BECFD9600570AA8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8512CFE0FBF935DB4402C3BE /* Pods_TraceLog_WatchOS_Extension.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -160,6 +224,8 @@
 				6003F5B5195388D20070C39A /* TraceLog-iOS-Tests */,
 				EA5C7FB51BEBAA7000B3951D /* TraceLog-OSX */,
 				EA5C7FC51BEBAA7000B3951D /* TraceLog-OSX-Tests */,
+				EAAD99F71BECFD9600570AA8 /* TraceLog-WatchOS */,
+				EAAD9A061BECFD9600570AA8 /* TraceLog-WatchOS Extension */,
 				EA30384C1BEA94DC00DC4084 /* Tests */,
 				6003F58C195388D20070C39A /* Frameworks */,
 				6003F58B195388D20070C39A /* Products */,
@@ -174,6 +240,8 @@
 				6003F5AE195388D20070C39A /* TraceLog-iOS-Tests.xctest */,
 				EA5C7FB41BEBAA7000B3951D /* TraceLog-OSX.app */,
 				EA5C7FC21BEBAA7000B3951D /* TraceLog-OSX-Tests.xctest */,
+				EAAD99F61BECFD9600570AA8 /* TraceLog-WatchOS.app */,
+				EAAD9A021BECFD9600570AA8 /* TraceLog-WatchOS Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -312,6 +380,27 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		EAAD99F71BECFD9600570AA8 /* TraceLog-WatchOS */ = {
+			isa = PBXGroup;
+			children = (
+				EAAD99F81BECFD9600570AA8 /* Interface.storyboard */,
+				EAAD99FB1BECFD9600570AA8 /* Assets.xcassets */,
+				EAAD99FD1BECFD9600570AA8 /* Info.plist */,
+			);
+			path = "TraceLog-WatchOS";
+			sourceTree = "<group>";
+		};
+		EAAD9A061BECFD9600570AA8 /* TraceLog-WatchOS Extension */ = {
+			isa = PBXGroup;
+			children = (
+				EAAD9A071BECFD9600570AA8 /* InterfaceController.swift */,
+				EAAD9A091BECFD9600570AA8 /* ExtensionDelegate.swift */,
+				EAAD9A0B1BECFD9600570AA8 /* Assets.xcassets */,
+				EAAD9A0D1BECFD9600570AA8 /* Info.plist */,
+			);
+			path = "TraceLog-WatchOS Extension";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -325,10 +414,12 @@
 				6003F588195388D20070C39A /* Resources */,
 				64C638461601CBF102C3620B /* Copy Pods Resources */,
 				99BD6A45FF4535B3712D8BBE /* Embed Pods Frameworks */,
+				EAAD9A181BECFD9600570AA8 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				EAAD9A0F1BECFD9600570AA8 /* PBXTargetDependency */,
 			);
 			name = "TraceLog-iOS";
 			productName = TraceLog;
@@ -397,6 +488,43 @@
 			productReference = EA5C7FC21BEBAA7000B3951D /* TraceLog-OSX-Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		EAAD99F51BECFD9600570AA8 /* TraceLog-WatchOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EAAD9A171BECFD9600570AA8 /* Build configuration list for PBXNativeTarget "TraceLog-WatchOS" */;
+			buildPhases = (
+				EAAD99F41BECFD9600570AA8 /* Resources */,
+				EAAD9A161BECFD9600570AA8 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EAAD9A051BECFD9600570AA8 /* PBXTargetDependency */,
+			);
+			name = "TraceLog-WatchOS";
+			productName = "TraceLog-WatchOS";
+			productReference = EAAD99F61BECFD9600570AA8 /* TraceLog-WatchOS.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		EAAD9A011BECFD9600570AA8 /* TraceLog-WatchOS Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EAAD9A151BECFD9600570AA8 /* Build configuration list for PBXNativeTarget "TraceLog-WatchOS Extension" */;
+			buildPhases = (
+				7D4004AC25943A0BEED07E01 /* Check Pods Manifest.lock */,
+				EAAD99FE1BECFD9600570AA8 /* Sources */,
+				EAAD99FF1BECFD9600570AA8 /* Frameworks */,
+				EAAD9A001BECFD9600570AA8 /* Resources */,
+				6889D0C50051EE1CC2C32FF8 /* Embed Pods Frameworks */,
+				89A10C542F9D8C420FFB086A /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "TraceLog-WatchOS Extension";
+			productName = "TraceLog-WatchOS Extension";
+			productReference = EAAD9A021BECFD9600570AA8 /* TraceLog-WatchOS Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -418,6 +546,12 @@
 						CreatedOnToolsVersion = 7.1;
 						TestTargetID = EA5C7FB31BEBAA7000B3951D;
 					};
+					EAAD99F51BECFD9600570AA8 = {
+						CreatedOnToolsVersion = 7.1;
+					};
+					EAAD9A011BECFD9600570AA8 = {
+						CreatedOnToolsVersion = 7.1;
+					};
 				};
 			};
 			buildConfigurationList = 6003F585195388D10070C39A /* Build configuration list for PBXProject "TraceLog" */;
@@ -437,6 +571,8 @@
 				6003F5AD195388D20070C39A /* TraceLog-iOS-Tests */,
 				EA5C7FB31BEBAA7000B3951D /* TraceLog-OSX */,
 				EA5C7FC11BEBAA7000B3951D /* TraceLog-OSX-Tests */,
+				EAAD99F51BECFD9600570AA8 /* TraceLog-WatchOS */,
+				EAAD9A011BECFD9600570AA8 /* TraceLog-WatchOS Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -477,6 +613,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EAAD99F41BECFD9600570AA8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EAAD99FC1BECFD9600570AA8 /* Assets.xcassets in Resources */,
+				EAAD99FA1BECFD9600570AA8 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EAAD9A001BECFD9600570AA8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EAAD9A0C1BECFD9600570AA8 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -588,6 +741,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TraceLog-iOS/Pods-TraceLog-iOS-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		6889D0C50051EE1CC2C32FF8 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TraceLog-WatchOS Extension/Pods-TraceLog-WatchOS Extension-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		74648CEAAE988D0BFE7B5834 /* Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -603,6 +771,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TraceLog-iOS-Tests/Pods-TraceLog-iOS-Tests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		7D4004AC25943A0BEED07E01 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 		86160890E0B471E23CC18635 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -616,6 +799,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TraceLog-iOS-Tests/Pods-TraceLog-iOS-Tests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		89A10C542F9D8C420FFB086A /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TraceLog-WatchOS Extension/Pods-TraceLog-WatchOS Extension-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		947C74E624F43DB32B686241 /* Check Pods Manifest.lock */ = {
@@ -700,6 +898,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EAAD99FE1BECFD9600570AA8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EAAD9A0A1BECFD9600570AA8 /* ExtensionDelegate.swift in Sources */,
+				EAAD9A081BECFD9600570AA8 /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -712,6 +919,16 @@
 			isa = PBXTargetDependency;
 			target = EA5C7FB31BEBAA7000B3951D /* TraceLog-OSX */;
 			targetProxy = EA5C7FC31BEBAA7000B3951D /* PBXContainerItemProxy */;
+		};
+		EAAD9A051BECFD9600570AA8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EAAD9A011BECFD9600570AA8 /* TraceLog-WatchOS Extension */;
+			targetProxy = EAAD9A041BECFD9600570AA8 /* PBXContainerItemProxy */;
+		};
+		EAAD9A0F1BECFD9600570AA8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EAAD99F51BECFD9600570AA8 /* TraceLog-WatchOS */;
+			targetProxy = EAAD9A0E1BECFD9600570AA8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -754,6 +971,14 @@
 				EA5C7FBB1BEBAA7000B3951D /* Base */,
 			);
 			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		EAAD99F81BECFD9600570AA8 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EAAD99F91BECFD9600570AA8 /* Base */,
+			);
+			name = Interface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -1010,6 +1235,94 @@
 			};
 			name = Release;
 		};
+		EAAD9A111BECFD9600570AA8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IBSC_MODULE = TraceLog_WatchOS_Extension;
+				INFOPLIST_FILE = "TraceLog-WatchOS/Info.plist";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.TraceLog-iOS.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		EAAD9A121BECFD9600570AA8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IBSC_MODULE = TraceLog_WatchOS_Extension;
+				INFOPLIST_FILE = "TraceLog-WatchOS/Info.plist";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.TraceLog-iOS.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		EAAD9A131BECFD9600570AA8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 137533AB51DF640FAEB4EF5A /* Pods-TraceLog-WatchOS Extension.debug.xcconfig */;
+			buildSettings = {
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = "$(inherited)";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "TraceLog-WatchOS Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.TraceLog-iOS.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		EAAD9A141BECFD9600570AA8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3390E7AC58C6408C4B48D168 /* Pods-TraceLog-WatchOS Extension.release.xcconfig */;
+			buildSettings = {
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = "$(inherited)";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "TraceLog-WatchOS Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.TraceLog-iOS.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1054,6 +1367,24 @@
 			buildConfigurations = (
 				EA5C7FCD1BEBAA7000B3951D /* Debug */,
 				EA5C7FCE1BEBAA7000B3951D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EAAD9A151BECFD9600570AA8 /* Build configuration list for PBXNativeTarget "TraceLog-WatchOS Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EAAD9A131BECFD9600570AA8 /* Debug */,
+				EAAD9A141BECFD9600570AA8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EAAD9A171BECFD9600570AA8 /* Build configuration list for PBXNativeTarget "TraceLog-WatchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EAAD9A111BECFD9600570AA8 /* Debug */,
+				EAAD9A121BECFD9600570AA8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
