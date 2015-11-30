@@ -34,6 +34,10 @@ __attribute__((used,visibility("internal"),constructor(101))) static void static
     ];
 };
 
+NSArray * validLogLevelStrings() {
+    return _logLevelStrings;
+}
+
 LogLevel logLevelForString(NSString * logLevelString) {
 
     for (LogLevel logLevel = LogLevelOff; logLevel < [_logLevelStrings count]; logLevel++) {

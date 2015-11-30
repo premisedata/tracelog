@@ -31,5 +31,7 @@ typedef NS_ENUM(NSInteger, LogLevel) {
     LogLevelTrace4  = 7
 };
 
+NSArray * validLogLevelStrings();
+
 LogLevel logLevelForString(NSString * logLevelString);
 NSString * stringForLogLevel(LogLevel logLevel);
