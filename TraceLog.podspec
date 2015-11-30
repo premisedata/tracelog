@@ -41,7 +41,7 @@ Pod::Spec.new do |s|
   s.default_subspecs = 'ObjC'
 
   s.subspec 'Core' do |ss|
-     ss.public_header_files = 'TraceLog/Core/*.h', 'TraceLog/Internal/*.h'
+     ss.public_header_files = 'TraceLog/Core/*.h', 'TraceLog/Core/Internal/*.h'
      ss.source_files = 'TraceLog/Core/**/*.{h,m}'
   end
 

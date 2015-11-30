@@ -89,18 +89,33 @@
       <EnvironmentVariables>
          <EnvironmentVariable
             key = "LOG_ALL"
-            value = "INFO"
+            value = "OFF"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+         <EnvironmentVariable
+            key = "LOG_REGEX_1"
+            value = "/^TL.*/TRACE4/tag"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+         <EnvironmentVariable
+            key = "LOG_REGEX_2"
+            value = "/^TraceLog.*$/TRACE1/tag"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+         <EnvironmentVariable
+            key = "LOG_REGEX_3"
+            value = "/^[0-5]?[0-9]$/WARNING/line"
             isEnabled = "YES">
          </EnvironmentVariable>
          <EnvironmentVariable
             key = "LOG_PREFIX_TL"
             value = "TRACE4"
-            isEnabled = "YES">
+            isEnabled = "NO">
          </EnvironmentVariable>
          <EnvironmentVariable
             key = "LOG_TAG_TraceLogTests"
             value = "TRACE4"
-            isEnabled = "YES">
+            isEnabled = "NO">
          </EnvironmentVariable>
       </EnvironmentVariables>
       <AdditionalOptions>

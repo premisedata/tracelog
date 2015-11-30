@@ -25,7 +25,7 @@
       "name": "Core",
       "public_header_files": [
         "TraceLog/Core/*.h",
-        "TraceLog/Internal/*.h"
+        "TraceLog/Core/Internal/*.h"
       ],
       "source_files": "TraceLog/Core/**/*.{h,m}"
     },

@@ -79,18 +79,23 @@
             isEnabled = "YES">
          </EnvironmentVariable>
          <EnvironmentVariable
-            key = "LOG_TAG_AppDelegate"
-            value = "TRACE4"
+            key = "LOG_TAG_EQUAL"
+            value = "AppDelegate=TRACE4,MyCustomTag=WARNING"
             isEnabled = "YES">
          </EnvironmentVariable>
          <EnvironmentVariable
-            key = "LOG_PREFIX_TraceLog"
-            value = "TRACE4"
+            key = "LOG_TAG_PREFIX"
+            value = "TraceLog=TRACE4"
             isEnabled = "YES">
          </EnvironmentVariable>
          <EnvironmentVariable
-            key = "LOG_TAG_MyCustomTag"
-            value = "WARNING"
+            key = "LOG_REGEX_BEGINS_WITH_TL"
+            value = "/^TL.*$/,TRACE4"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+         <EnvironmentVariable
+            key = "LOG_FILTER"
+            value = "REGEX(/^TL.*$/)=TRACE4,EQUAL(AppDelegate)=TRACE4"
             isEnabled = "YES">
          </EnvironmentVariable>
       </EnvironmentVariables>
