@@ -70,7 +70,9 @@ public func == (lhs: LogLevel, rhs: LogLevel) -> Bool {
     return lhs.rawValue == rhs.rawValue
 }
 
-internal extension LogLevel {
+/// This needs to match the level of the public call that is using it produces a swift
+/// 4.0 error.
+public extension LogLevel {
 
     static var rawRange: ClosedRange<Int> { return LogLevel.error.rawValue...LogLevel.trace4.rawValue }
     static var rawTraceLevels: ClosedRange<Int> { return 1...4 }
